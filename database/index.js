@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const data = require('./data.js');
 mongoose.connect('mongodb://localhost/petsy');
 
-let petsySchema = mongoose.Schema({
+const petsySchema = mongoose.Schema({
     pet_id: {
         type: Number,
         unique: true
@@ -13,7 +13,7 @@ let petsySchema = mongoose.Schema({
     image_url: String
 }, { collection: 'Pet_Info' })
 
-let Pet_Info = mongoose.model('Pet_Info', petsySchema);
+const Pet_Info = mongoose.model('Pet_Info', petsySchema);
 
 
 const Seed = (pets) => {
@@ -38,4 +38,14 @@ const Seed = (pets) => {
 
 Seed(data);
 
+const getPetById = (pet_id, cb) => {
+    const query = Pet_Info.findOne({ pet_id: pet_id }).exec((err, pet) => {
+        if (err) {
+            callback(err);
+        } else {
+            callback(null, pet);
+        }
+    })
+}
 
+module.exports.getPetById = getPetById;
