@@ -1,0 +1,28 @@
+{
+  "name": "pet-info",
+  "version": "1.0.0",
+  "description": "Petsy Pet Info Service",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ByeEric/Pet-Info.git"
+  },
+  "keywords": [
+    "pets"
+  ],
+  "author": "Michael Nutt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ByeEric/Pet-Info/issues"
+  },
+  "homepage": "https://github.com/ByeEric/Pet-Info#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.9",
+    "pg": "^7.7.1"
+  }
+}
