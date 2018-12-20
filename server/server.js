@@ -4,10 +4,17 @@ const db = require('../database/index.js')
 const app = express();
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }))
 
-app.get('api/info', (req, res) => {
+app.get('/api/info', (req, res) => {
     //extract pet_id from request
+    let pet_id = req.body.pet_id;
+
     //call db.getPetById(pet_id);
+    db.getPetById(pet_id, (petInfo) => {
+        res.send(petInfo)
+    })
+
     //send response with pet info to client
 });
 

@@ -1,14 +1,13 @@
 const mongoose = require('mongoose');
-const data = require('./data.js');
-mongoose.connect('mongodb://localhost/petsy');
+mongoose.connect('mongodb://localhost:27017/petsy');
 
 const petsySchema = mongoose.Schema({
     pet_id: {
         type: Number,
         unique: true
     },
-    type: String,
-    subtype: String,
+    genus: String,
+    species: String,
     description: String,
     image_url: String
 }, { collection: 'Pet_Info' })
@@ -16,36 +15,43 @@ const petsySchema = mongoose.Schema({
 const Pet_Info = mongoose.model('Pet_Info', petsySchema);
 
 
-const Seed = (pets) => {
-    for (let pet of pets) {
-        const newDoc = new Pet_Info({
-            pet_id: pet.pet_id,
-            genus: pet.genus,
-            species: pet.species,
-            description: pet.description,
-            image_url: pet.image_url
-        });
+// const Seed = (pets) => {
+//     for (let pet of pets) {
 
-        Pet_Info.create(newDoc, (err, result) => {
-            if (err) {
-                console.log(err);
-            } else {
-                console.log(result);
-            }
-        })
-    }
-}
 
-Seed(data);
+//         const newDoc = new Pet_Info({
+//             pet_id: pet.pet_id,
+//             genus: pet.genus,
+//             species: pet.species,
+//             description: pet.description,
+//             // image_url: pet.image_url
+//         });
+
+//         Pet_Info.create(newDoc, (err, result) => {
+//             if (err) {
+//                 console.log(err);
+//             } else {
+//                 console.log(result);
+//             }
+//         })
+//     }
+// }
+
+// Seed(data);
+
 
 const getPetById = (pet_id, cb) => {
-    const query = Pet_Info.findOne({ pet_id: pet_id }).exec((err, pet) => {
+    const query = Pet_Info.findOne({ pet_id: pet_id })
+    query.exec((err, pet) => {
         if (err) {
-            callback(err);
+            cb(err);
         } else {
-            callback(null, pet);
+            cb(pet);
         }
     })
 }
 
-module.exports.getPetById = getPetById;
+module.exports = {
+    Pet_Info,
+    getPetById
+}

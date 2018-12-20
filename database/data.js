@@ -1,4 +1,5 @@
-
+const mongoose = require('mongoose');
+const db = require('./index.js');
 // pet_id chart:
 // number index for ref: [0][1][2][3],
 // [0] - 'class' ex: mammal;
@@ -21,6 +22,8 @@
 // 8 -> 
 // 9 ->
 
+
+mongoose.connect('mongodb://localhost:27017/petsy');
 
 const data = [
     {
@@ -439,7 +442,6 @@ const data = [
         "species": "Common Chimpanzee",
         "description": "Pretty much an insanely strong child. May throw poop."
     },
-    //end of my picture responsibility
     {
         "pet_id": "18452",
         "class": "mammal",
@@ -552,8 +554,6 @@ const data = [
         "species": "Water Deer",
         "description": "Vampire deer.",
     },
-
-    //descriptions left off here ----------------------
     {
         "pet_id": "10166",
         "class": "mammal",
@@ -852,5 +852,27 @@ const data = [
     },
 ];
 
+const Seed = (pets) => {
+    for (let pet of pets) {
 
-module.exports = data;
+
+        const newDoc = new db.Pet_Info({
+            pet_id: pet.pet_id,
+            genus: pet.genus,
+            species: pet.species,
+            description: pet.description,
+            // image_url: pet.image_url
+        });
+
+        db.Pet_Info.create(newDoc, (err, result) => {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log(result);
+            }
+        })
+    }
+}
+
+Seed(data);
+

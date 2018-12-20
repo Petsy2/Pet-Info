@@ -4,9 +4,9 @@
   "description": "Petsy Pet Info Service",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/index.js",
+    "server-dev": "nodemon server/server.js",
     "test": "test",
-    "seed": "node database/index.js"
+    "seed": "node database/data.js"
   },
   "repository": {
     "type": "git",
