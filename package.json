@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon server/index.js",
     "test": "test",
-    "seed": "nodemon database/index.js"
+    "seed": "node database/index.js"
   },
   "repository": {
     "type": "git",

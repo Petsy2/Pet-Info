@@ -68,7 +68,7 @@ const data = [
         "class": "mammal",
         "family": "Felidae",
         "genus": "Acinonyx",
-        "species": "Cheeta",
+        "species": "Cheetah",
         "description": "The Forest Gump of big cats."
     },
     {
@@ -348,8 +348,8 @@ const data = [
         "class": "mammal",
         "family": "Suidae",
         "genus": "Sus",
-        "species": "The Javan warty pig or Javan pig (Sus verrucosus) is a species of even-toed ungulate in the family Suidae.",
-        "description": "6,055",
+        "species": "Javan Warty Pig",
+        "description": "The Javan warty pig or Javan pig (Sus verrucosus) is a species of even-toed ungulate in the family Suidae.",
     },
     {
         "pet_id": "17142",
@@ -416,7 +416,7 @@ const data = [
         "description": "The western gorilla (Gorilla gorilla) is a great ape—the type species as well as the most populous species of the genus Gorilla.",
     },
     {
-        "pet_id": "18249",
+        "pet_id": "18250",
         "class": "mammal",
         "family": "Hominidae",
         "genus": "Gorilla",
@@ -560,7 +560,7 @@ const data = [
         "family": "Giraffidae",
         "genus": "Giraffa",
         "species": "Giraffe",
-        "description": "123,050",
+        "description": "Hope your car has a sunroof. Also, be prepared to spend extra on ties.",
     },
     {
         "pet_id": "10167",
@@ -568,7 +568,7 @@ const data = [
         "family": "Giraffidae",
         "genus": "Okapia",
         "species": "Okapi",
-        "description": "42,150",
+        "description": "The Okapi, also known as the forest giraffe, congolese giraffe or zebra giraffe, is an artiodactyl mammal native to the northeast of the Democratic Republic of the Congo in Central Africa.",
     },
     {
         "pet_id": "10168",
@@ -576,7 +576,7 @@ const data = [
         "family": "Bovidae",
         "genus": "Bos",
         "species": "Gaur",
-        "description": "47,555",
+        "description": "The Gaur, also called the Indian bison, is the largest extant bovine. This species is native to South and Southeast Asia.",
     },
     {
         "pet_id": "10169",
@@ -584,7 +584,7 @@ const data = [
         "family": "Bovidae",
         "genus": "Bos",
         "species": "Zebu",
-        "description": "23,595",
+        "description": "The Zebu, sometimes known as indicine cattle or humped cattle, is a species or subspecies of domestic cattle originating in South Asia.",
     },
     {
         "pet_id": "10170",
@@ -592,7 +592,7 @@ const data = [
         "family": "Bovidae",
         "genus": "Bos",
         "species": "Wild Yak",
-        "description": "25,155",
+        "description": "If you don't scrub that kitchen floor, you ain't gonna rock and roll no more. Yakety yak (Don't talk back)"
     },
     {
         "pet_id": "10171",
@@ -600,7 +600,7 @@ const data = [
         "family": "Cervidae",
         "genus": "Rangifer",
         "species": "Reindeer",
-        "description": "63,150",
+        "description": "CANNOT ACTUALLY FLY. DO NOT ATTEMPT.",
     },
     {
         "pet_id": "10172",
@@ -608,7 +608,7 @@ const data = [
         "family": "Cervidae",
         "genus": "Odocoileus",
         "species": "White-Tailed Deer",
-        "description": "2,560",
+        "description": "Forest puppies.",
     },
     {
         "pet_id": "10173",
@@ -616,7 +616,7 @@ const data = [
         "family": "Cervidae",
         "genus": "Alces",
         "species": "Moose",
-        "description": "13,720",
+        "description": "Don't you dare give it a muffin.",
     },
     {
         "pet_id": "4111",
@@ -624,7 +624,7 @@ const data = [
         "family": "Crocodylidae",
         "genus": "Crocodylus",
         "species": "Freshwater Crocodile",
-        "description": "24,700",
+        "description": "Made famous by Steve Irwin.",
     },
     {
         "pet_id": "4112",
@@ -632,7 +632,7 @@ const data = [
         "family": "Crocodylidae",
         "genus": "Crocodylus",
         "species": "Mugger Crocodile",
-        "description": "26,340",
+        "description": "Just give it your wallet. He'll leave you alone.",
     },
     {
         "pet_id": "4113",
@@ -640,7 +640,7 @@ const data = [
         "family": "Crocodylidae",
         "genus": "Crocodylus",
         "species": "American Crocodile",
-        "description": "22,510",
+        "description": "The American Crocodile is a species of crocodilian found in the Neotropics. It is the most widespread of the four extant species of crocodiles from the Americas, with populations present from South Florida and the coasts of Mexico to as far south as Peru and Venezuela.",
     },
     {
         "pet_id": "4114",
@@ -648,7 +648,7 @@ const data = [
         "family": "Crocodylidae",
         "genus": "Crocodylus",
         "species": "Saltwater Crocodile",
-        "description": "29,100",
+        "description": "Mamma always said crocodiles are angry because they got all them teeth but no toothbrush.",
     },
     {
         "pet_id": "4215",
@@ -656,7 +656,7 @@ const data = [
         "family": "Alligatoridae",
         "genus": "Caiman",
         "species": "Broad-Snouted Caiman",
-        "description": "32,690",
+        "description": "The broad-snouted caiman (Caiman latirostris) is a crocodilian reptile found in eastern and central South America, including southeastern Brazil, northern Argentina, Uruguay, Paraguay, and Bolivia.",
     },
     {
         "pet_id": "4216",
@@ -664,7 +664,7 @@ const data = [
         "family": "Alligatoridae",
         "genus": "Caiman",
         "species": "Yacare Caiman",
-        "description": "33,240",
+        "description": "The yacare caiman (Caiman yacare, jacaré in Portuguese) is a species of caiman found in central South America, including northeastern Argentina, Uruguay, southeastern Peru, eastern Bolivia, central/southwest Brazil, and the rivers of Paraguay.",
     },
     {
         "pet_id": "4227",
@@ -672,7 +672,7 @@ const data = [
         "family": "Alligatoridae",
         "genus": "Alligator",
         "species": "American Alligator",
-        "description": "46,990",
+        "description": "Oooo dats a big ole ornery gatuh down dayuh.",
     },
     {
         "pet_id": "4228",
@@ -680,7 +680,7 @@ const data = [
         "family": "Alligatoridae",
         "genus": "Alligator",
         "species": "Chinese Alligator",
-        "description": "38,465",
+        "description": "The Chinese Alligator, also known as the Yangtze alligator, China alligator, or historically called the muddy dragon, is one of two known living species of Alligator, a genus in the family Alligatoridae, the other being the American alligator.",
     },
     {
         "pet_id": "4239",
@@ -688,7 +688,7 @@ const data = [
         "family": "Alligatoridae",
         "genus": "Paleosuchus",
         "species": "Cuvier's Dwarf Caiman",
-        "description": "23,565",
+        "description": "Cuvier's dwarf caiman (Paleosuchus palpebrosus) is a small crocodilian from northern and central South America in the alligator family.",
     },
     {
         "pet_id": "42310",
@@ -696,7 +696,7 @@ const data = [
         "family": "Alligatoridae",
         "genus": "Paleosuchus",
         "species": "Smooth-Fronted Caiman",
-        "description": "21,255",
+        "description": "He's a smooth ali-gator.",
     },
     {
         "pet_id": "42411",
@@ -704,7 +704,7 @@ const data = [
         "family": "Alligatoridae",
         "genus": "Melanosuchus",
         "species": "Black Caiman",
-        "description": "28,425",
+        "description": "The black caiman is a species of large crocodilian and, along with the American alligator, is one of the biggest extant members of the family Alligatoridae and order Crocodilia.",
     },
     {
         "pet_id": "43112",
@@ -712,7 +712,7 @@ const data = [
         "family": "Gavialidae",
         "genus": "Tomistoma",
         "species": "False Gharial",
-        "description": "33,375",
+        "description": "The false gharial, also known as Malayan gharial, Sunda gharial and tomistoma, is a freshwater crocodilian native to Peninsular Malaysia, Borneo, Sumatra and Java.",
     },
     {
         "pet_id": "44113",
@@ -720,7 +720,7 @@ const data = [
         "family": "Pythonidae",
         "genus": "Python",
         "species": "Burmese Python",
-        "description": "7,275",
+        "description": "The Burmese python (Python bivittatus) is one of the five largest species of snakes in the world (about the third-largest as measured either by length or weight).",
     },
     {
         "pet_id": "45114",
@@ -728,7 +728,7 @@ const data = [
         "family": "Boidae",
         "genus": "Boa",
         "species": "Boa Constrictor",
-        "description": "12,100",
+        "description": "Strangle noodle.",
     },
     {
         "pet_id": "45215",
@@ -736,15 +736,15 @@ const data = [
         "family": "Boidae",
         "genus": "Eunectes",
         "species": "Green Anaconda",
-        "description": "15,670",
+        "description": "Largest of the danger noodles.",
     },
     {
         "pet_id": "45216",
         "class": "Reptilia",
         "family": "Boidae",
         "genus": "Eunectes",
-        "species": "Eunectes Beniensis",
-        "description": "17,470",
+        "species": "Bolivian Anaconda",
+        "description": "Bolivian Anaconda is a nonvenomous boa species known only from the northeastern parts of Bolivia, but it possibly occurs in adjacent parts of Brazil.",
     },
     {
         "pet_id": "46117",
@@ -752,7 +752,7 @@ const data = [
         "family": "Viperidae",
         "genus": "Montivipera",
         "species": "Central Turkish Mountain Viper",
-        "description": "12,850",
+        "description": "A venomous viper species endemic to the mountainous regions of central Turkey.",
     },
     {
         "pet_id": "2111",
@@ -760,7 +760,7 @@ const data = [
         "family": "Struthionidae",
         "genus": "Struthio",
         "species": "Ostrich",
-        "description": "11,000"
+        "description": "The Forest Gump of birds."
     },
     {
         "pet_id": "2222",
@@ -768,7 +768,7 @@ const data = [
         "family": "Apterygidae",
         "genus": "Apteryx",
         "species": "Kiwi",
-        "description": "2,000"
+        "description": "Kiwi, or kiwis, are flightless birds native to New Zealand, in the genus Apteryx and family Apterygidae. Approximately the size of a domestic chicken, kiwi are by far the smallest living ratites (which also consist of ostriches, emus, rheas, and cassowaries), and lay the largest egg in relation to their body size of any species of bird in the world"
     },
     {
         "pet_id": "2333",
@@ -776,7 +776,7 @@ const data = [
         "family": "Anatidae",
         "genus": "Anas",
         "species": "Steamer Duck",
-        "description": "1,200"
+        "description": "The steamer ducks are a genus (Tachyeres) of ducks in the family Anatidae. All of the four species occur at the southern cone of South America in Chile and Argentina, and all except the flying steamer duck are flightless; even this one species capable of flight rarely takes to the air."
     },
     {
         "pet_id": "2344",
@@ -784,7 +784,7 @@ const data = [
         "family": "Anatidae",
         "genus": "Cygnus",
         "species": "Mute swan",
-        "description": "4,500"
+        "description": "The mute swan (Cygnus olor) is a species of swan and a member of the waterfowl family Anatidae. It is native to much of Eurasia, and (as a rare winter visitor) the far north of Africa. It is an introduced species in North America, Australasia and southern Africa. The name 'mute' derives from it being less vocal than other swan species."
     },
     {
         "pet_id": "2345",
@@ -792,7 +792,7 @@ const data = [
         "family": "Anatidae",
         "genus": "Cygnus",
         "species": "Trumpeter swan",
-        "description": "6,300"
+        "description": "The trumpeter swan (Cygnus buccinator) is a species of swan found in North America. The heaviest living bird native to North America, it is also the largest extant species of waterfowl with a wingspan that may exceed 10 ft (3.0 m)."
     },
     {
         "pet_id": "2356",
@@ -800,7 +800,7 @@ const data = [
         "family": "Anatidae",
         "genus": "Hymenolaimus",
         "species": "Blue Duck",
-        "description": "2,500"
+        "description": "The blue duck or whio (Hymenolaimus malacorhynchos) is a member of the duck, goose and swan family Anatidae endemic to New Zealand. It is the only member of the genus Hymenolaimus."
     },
     {
         "pet_id": "2337",
@@ -808,7 +808,7 @@ const data = [
         "family": "Anatidae",
         "genus": "Anas",
         "species": "Mallard",
-        "description": "1,300"
+        "description": "The mallard (/ˈmælɑːrd/ or /ˈmælərd/) (Anas platyrhynchos) is a dabbling duck that breeds throughout the temperate and subtropical Americas, Eurasia, and North Africa and has been introduced to New Zealand, Australia, Peru, Brazil, Uruguay, Argentina, Chile, Colombia, the Falkland Islands, and South Africa."
     },
     {
         "pet_id": "2338",
@@ -816,7 +816,7 @@ const data = [
         "family": "Anatidae",
         "genus": "Anas",
         "species": "Yellow-Billed Duck",
-        "description": "2,600"
+        "description": "The yellow-billed duck (Anas undulata) is a 51–58 cm long dabbling duck which is an abundant resident breeder in southern and eastern Africa."
     },
     {
         "pet_id": "2339",
@@ -824,7 +824,7 @@ const data = [
         "family": "Anatidae",
         "genus": "Anas",
         "species": "Hawaiian duck",
-        "description": "2,800"
+        "description": "The Hawaiian duck (Anas wyvilliana) or koloa is a species of bird in the family Anatidae that is endemic to the large islands of Hawaiʻi. Taxonomically, the koloa is closely allied with the mallard. It differs in that it is monochromatic (with similarly marked males and females) and non-migratory."
     },
     {
         "pet_id": "24110",
@@ -832,7 +832,7 @@ const data = [
         "family": "Sulidae",
         "genus": "	Sula",
         "species": "Blue-Footed Booby",
-        "description": "203,560"
+        "description": "The best bird, period."
     },
     {
         "pet_id": "3111",
@@ -840,7 +840,7 @@ const data = [
         "family": "Melanocetidae",
         "genus": "Melanocetus",
         "species": "Humpback Anglerfish",
-        "description": "129,880"
+        "description": "Do not go into the light."
     },
     {
         "pet_id": "3212",
@@ -848,7 +848,7 @@ const data = [
         "family": "Stomiidae",
         "genus": "Chauliodus",
         "species": "Viperfish",
-        "description": "109,880"
+        "description": "A viperfish is any species of marine fish in the genus Chauliodus. Viperfish are characterized by long, needle-like teeth and hinged lower jaws. A typical viperfish grows to lengths of 30 to 60 cm (12 to 23.5 in). Viperfish stay near lower depths (250–5,000 feet [80–1,520 m]) in the daytime and shallower depths at night, primarily in tropical and temperate waters."
     },
 ];
 
