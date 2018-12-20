@@ -1,20 +1,856 @@
-const data =
-    [
-        {
-            "pet_id": "1",
-            "type": "Dog",
-            "subtype": "Pug",
-            "description": "They're ugly",
-            "image_url": "dog.com"
-        },
-        {
-            "pet_id": "2",
-            "type": "Dog",
-            "subtype": "Australian Sheppherd",
-            "description": "It's a dog",
-            "image_url": "dog.com"
-        }
-    ]
+
+// pet_id chart:
+// number index for ref: [0][1][2][3],
+// [0] - 'class' ex: mammal;
+// [1] - 'family' ex: felidae;
+// [2] - 'genus' ex: panthera;
+// [3] - 'no.' ex: Tiger... just the count of that 'family' of animal;
+
+//                 [0]      [1]     [2]    [3]
+// ex: |1137| -> Mammal, Felidae, Puma, Cougar... this is a Cougar
+
+// > CLASS chart:
+
+// 1 -> Mammal
+// 2 -> Aves 'birds'
+// 3 -> Actinopterygii 'deep sea fish'
+// 4 -> 
+// 5 -> 
+// 6 -> 
+// 7 -> 
+// 8 -> 
+// 9 ->
+
+
+const data = [
+    {
+        "pet_id": "1111",
+        "class": "mammal",
+        "family": "Felidae",
+        "genus": "Panthera",
+        "species": "Tiger",
+        "description": "The tiger (Panthera tigris) is the largest cat species, most recognizable for its pattern of dark vertical stripes on reddish-orange fur with a lighter underside."
+    },
+    {
+        "pet_id": "1112",
+        "class": "mammal",
+        "family": "Felidae",
+        "genus": "Panthera",
+        "species": "Lion",
+        "description": "It's gonna eat you. BUY BUY BUY!!!!"
+    },
+    {
+        "pet_id": "1113",
+        "class": "mammal",
+        "family": "Felidae",
+        "genus": "Panthera",
+        "species": "Jaguar",
+        "description": "Spooky-cat. Apparently they live in Florida."
+    },
+    {
+        "pet_id": "1114",
+        "class": "mammal",
+        "family": "Felidae",
+        "genus": "Panthera",
+        "species": "Leopard",
+        "description": "Spots on spots on spots."
+    },
+    {
+        "pet_id": "1115",
+        "class": "mammal",
+        "family": "Felidae",
+        "genus": "Panthera",
+        "species": "Snow Leopard",
+        "description": "Big white cat."
+    },
+    {
+        "pet_id": "1126",
+        "class": "mammal",
+        "family": "Felidae",
+        "genus": "Acinonyx",
+        "species": "Cheeta",
+        "description": "The Forest Gump of big cats."
+    },
+    {
+        "pet_id": "1137",
+        "class": "mammal",
+        "family": "Felidae",
+        "genus": "Puma",
+        "species": "Cougar",
+        "description": "Big forest cat."
+    },
+    {
+        "pet_id": "1218",
+        "class": "mammal",
+        "family": "Canidae",
+        "genus": "Urocyon",
+        "species": "Island Fox",
+        "description": "The island fox (Urocyon littoralis) is a small fox that is native to six of the eight Channel Islands of California."
+    },
+    {
+        "pet_id": "1229",
+        "class": "mammal",
+        "family": "Canidae",
+        "genus": "Vulpini",
+        "species": "Raccoon Dog",
+        "description": "Basically a fox that looks like a raccoon.",
+    },
+    {
+        "pet_id": "12210",
+        "class": "mammal",
+        "family": "Canidae",
+        "genus": "Vulpini",
+        "species": "Arctic Fox",
+        "description": "White fox. Lives in snow.",
+    },
+    {
+        "pet_id": "12211",
+        "class": "mammal",
+        "family": "Canidae",
+        "genus": "Vulpini",
+        "species": "Blanford's Fox",
+        "description": "Blanford's fox (Vulpes cana), is a small fox found in certain regions of the Middle East and Central Asia.",
+    },
+    {
+        "pet_id": "12212",
+        "class": "mammal",
+        "family": "Canidae",
+        "genus": "Vulpini",
+        "species": "Bat-Eared Fox",
+        "description": "It hears everything...",
+    },
+    {
+        "pet_id": "12213",
+        "class": "mammal",
+        "family": "Canidae",
+        "genus": "Canini",
+        "species": "Hoary Fox",
+        "description": "The hoary fox (Lycalopex vetulus), also called raposinha-do-campo (Portuguese for \"meadow fox\"), is a species of zorro or \"false\" fox endemic to Brazil. Unlike many other foxes, it feeds primarily on small invertebrates such as insects.",
+    },
+    {
+        "pet_id": "12214",
+        "class": "mammal",
+        "family": "Canidae",
+        "genus": "Canini",
+        "species": "Bush Dog",
+        "description": "The bush dog (Speothos venaticus) is a canid found in Central and South America.",
+    },
+    {
+        "pet_id": "12215",
+        "class": "mammal",
+        "family": "Canidae",
+        "genus": "Canini",
+        "species": "Crab-Eating Fox",
+        "description": "It eats crabs. Oh, and it's a fox.",
+    },
+    {
+        "pet_id": "12216",
+        "class": "mammal",
+        "family": "Canidae",
+        "genus": "Canini",
+        "species": "African Wild Dog",
+        "description": "The African wild dog (Lycaon pictus), also known as the painted hunting dog, painted wolf, African hunting dog or African painted dog, is a canid native to sub-Saharan Africa.",
+    },
+    {
+        "pet_id": "12217",
+        "class": "mammal",
+        "family": "Canidae",
+        "genus": "Canini",
+        "species": "Ethiopian Wolf",
+        "description": "Basically an African coyote.",
+    },
+    {
+        "pet_id": "12218",
+        "class": "mammal",
+        "family": "Canidae",
+        "genus": "Canini",
+        "species": "Coyote",
+        "description": "Very mischievous and wile. Hates roadrunners."
+    },
+    {
+        "pet_id": "12219",
+        "class": "mammal",
+        "family": "Canidae",
+        "genus": "Canini",
+        "species": "Side-Striped Jackal",
+        "description": "The side-striped jackal (Canis adustus) is a species of jackal, native to east and southern Africa.",
+    },
+    {
+        "pet_id": "12220",
+        "class": "mammal",
+        "family": "Canidae",
+        "genus": "Canini",
+        "species": "Gray Wolf",
+        "description": "Arch nemesis of Liam Neeson",
+    },
+    {
+        "pet_id": "13121",
+        "class": "mammal",
+        "family": "Balaenopteridae",
+        "genus": "Balaenoptera",
+        "species": "Blue Whale",
+        "description": "Largest living mammal. Fond of krill and plankton. 20-Million-gallon tank not included.",
+    },
+    {
+        "pet_id": "13122",
+        "class": "mammal",
+        "family": "Balaenopteridae",
+        "genus": "Balaenoptera",
+        "species": "Fin Whale",
+        "description": "The fin whale (Balaenoptera physalus), also known as finback whale or common rorqual and formerly known as herring whale or razorback whale, is a marine mammal belonging to the parvorder of baleen whales."
+    },
+    {
+        "pet_id": "13123",
+        "class": "mammal",
+        "family": "Balaenopteridae",
+        "genus": "Balaenoptera",
+        "species": "Antarctic Minke Whale",
+        "description": "The Antarctic minke whale or southern minke whale (Balaenoptera bonaerensis) is a species of minke whale within the suborder of baleen whales."
+    },
+    {
+        "pet_id": "13124",
+        "class": "mammal",
+        "family": "Balaenopteridae",
+        "genus": "Megaptera",
+        "species": "Humpback Whale",
+        "description": "My humps. My humps. My lovely whaley lumps."
+    },
+    {
+        "pet_id": "14125",
+        "class": "mammal",
+        "family": "Equidae",
+        "genus": "Equus",
+        "species": "Zebra",
+        "description": "Stripey horse.",
+    },
+    {
+        "pet_id": "14126",
+        "class": "mammal",
+        "family": "Equidae",
+        "genus": "Equus",
+        "species": "African Wild Ass",
+        "description": "The African wild ass or African wild donkey (Equus africanus) is a wild member of the horse family, Equidae.",
+    },
+    {
+        "pet_id": "14127",
+        "class": "mammal",
+        "family": "Equidae",
+        "genus": "Equus",
+        "species": "Przewalski's Horse",
+        "description": "Fat donkey.",
+    },
+    {
+        "pet_id": "14128",
+        "class": "mammal",
+        "family": "Ursidae",
+        "genus": "Ursus",
+        "species": "Kodiak Brown Bear",
+        "description": "Eats fish and the occasional documentarian."
+    },
+    {
+        "pet_id": "14129",
+        "class": "mammal",
+        "family": "Equidae",
+        "genus": "Equus",
+        "species": "Kiang",
+        "description": "World's largest ass."
+    },
+    {
+        "pet_id": "14130",
+        "class": "mammal",
+        "family": "Equidae",
+        "genus": "Equus",
+        "species": "Nubian Wild Ass",
+        "description": "The Nubian wild ass (Equus africanus africanus) is the nominate subspecies of African wild ass, and one of the ancestors of the domestic donkey, which was domesticated about 6,000 years ago."
+    },
+    {
+        "pet_id": "15131",
+        "class": "mammal",
+        "family": "Hippopotamidae",
+        "genus": "Choeropsis",
+        "species": "Pygmy Hippopotamus",
+        "description": "The pygmy hippopotamus (Choeropsis liberiensis or Hexaprotodon liberiensis) is a small hippopotamid which is native to the forests and swamps of West Africa, primarily in Liberia, with small populations in Sierra Leone, Guinea, and Ivory Coast.",
+    },
+    {
+        "pet_id": "15232",
+        "class": "mammal",
+        "family": "Hippopotamidae",
+        "genus": "Hippopotamus",
+        "species": "Hippopotamus",
+        "description": "Most dangerous animal in Africa.",
+    },
+    {
+        "pet_id": "16133",
+        "class": "mammal",
+        "family": "Camelidae",
+        "genus": "Lama",
+        "species": "Lama",
+        "description": "The lama is a domesticated South American camelid, widely used as a meat and pack animal by Andean cultures since the Pre-Columbian era.",
+    },
+    {
+        "pet_id": "16134",
+        "class": "mammal",
+        "family": "Camelidae",
+        "genus": "Lama",
+        "species": "Guanaco",
+        "description": "Lama + deer = Guanaco",
+    },
+    {
+        "pet_id": "16235",
+        "class": "mammal",
+        "family": "Camelidae",
+        "genus": "Camelus",
+        "species": "Bactrian camel",
+        "description": "The Bactrian camel (Camelus bactrianus) is a large, even-toed ungulate native to the steppes of Central Asia. The Bactrian camel has two humps on its back, in contrast to the single-humped dromedary camel",
+    },
+    {
+        "pet_id": "16236",
+        "class": "mammal",
+        "family": "Camelidae",
+        "genus": "Camelus",
+        "species": "Dromedary",
+        "description": "The dromedary, also called the Arabian camel (Camelus dromedarius), is a large, even-toed ungulate with one hump on its back.",
+    },
+    {
+        "pet_id": "16337",
+        "class": "mammal",
+        "family": "Camelidae",
+        "genus": "Vicugna",
+        "species": "Alpaca",
+        "description": "The alpaca (Vicugna pacos) is a species of South American camelid. It is similar to, and often confused with, the llama. However, alpacas are often noticeably smaller than llamas.",
+    },
+    {
+        "pet_id": "16338",
+        "class": "mammal",
+        "family": "Camelidae",
+        "genus": "Vicugna",
+        "species": "Vicuña",
+        "description": "The vicuña (Vicugna vicugna) or vicuna is one of the two wild South American camelids which live in the high alpine areas of the Andes, the other being the guanaco."
+    },
+    {
+        "pet_id": "17139",
+        "class": "mammal",
+        "family": "Suidae",
+        "genus": "Sus",
+        "species": "Bearded Pig",
+        "description": "Exactly what it sounds like.",
+    },
+    {
+        "pet_id": "17140",
+        "class": "mammal",
+        "family": "Suidae",
+        "genus": "Sus",
+        "species": "Visayan Warty Pig",
+        "description": "The Visayan warty pig (Sus cebifrons) is a critically endangered species in the pig genus (Sus)."
+    },
+    {
+        "pet_id": "17141",
+        "class": "mammal",
+        "family": "Suidae",
+        "genus": "Sus",
+        "species": "The Javan warty pig or Javan pig (Sus verrucosus) is a species of even-toed ungulate in the family Suidae.",
+        "description": "6,055",
+    },
+    {
+        "pet_id": "17142",
+        "class": "mammal",
+        "family": "Suidae",
+        "genus": "Sus",
+        "species": "Wild Boar",
+        "description": "The wild boar (Sus scrofa), also known as the wild swine, Eurasian wild pig, or simply wild pig, is a suid native to much of Eurasia, North Africa, and the Greater Sunda Islands. Human intervention has spread its distribution further, making the species one of the widest-ranging mammals in the world, as well as the most widely spread suiform.",
+    },
+    {
+        "pet_id": "17243",
+        "class": "mammal",
+        "family": "Suidae",
+        "genus": "Phacochoerus",
+        "species": "Common Warthog",
+        "description": "Pumba",
+    },
+    {
+        "pet_id": "17244",
+        "class": "mammal",
+        "family": "Suidae",
+        "genus": "Phacochoerus",
+        "species": "Desert Warthog",
+        "description": "The desert warthog (Phacochoerus aethiopicus) is a species of even-toed ungulate in the pig family (Suidae), found in northern Kenya and Somalia, and possibly Djibouti, Eritrea, and Ethiopia. ",
+    },
+    {
+        "pet_id": "17345",
+        "class": "mammal",
+        "family": "Suidae",
+        "genus": "Babyrousa",
+        "species": "North Sulawesi Babirusa",
+        "description": "The North Sulawesi babirusa, Babyrousa celebensis, is a pig-like animal native to Sulawesi and some nearby islands (Lembeh, Buton and Muna) in Indonesia. It has two pairs of large tusks composed of enlarged canine teeth.",
+    },
+    {
+        "pet_id": "17446",
+        "class": "mammal",
+        "family": "Suidae",
+        "genus": "Potamochoerus",
+        "species": "Red River Hog",
+        "description": "The red river hog (Potamochoerus porcus), also known as the bush pig (but not to be confused with P. larvatus, common name \"bushpig\"), is a wild member of the pig family living in Africa, with most of its distribution in the Guinean and Congolian forests.",
+    },
+    {
+        "pet_id": "17547",
+        "class": "mammal",
+        "family": "Suidae",
+        "genus": "Porcula",
+        "species": "Pygmy Hog",
+        "description": "A hog, but smaller.",
+    },
+    {
+        "pet_id": "18148",
+        "class": "mammal",
+        "family": "Hominidae",
+        "genus": "Pongo",
+        "species": "Sumatran Orangutan",
+        "description": "Manky Kong",
+    },
+    {
+        "pet_id": "18249",
+        "class": "mammal",
+        "family": "Hominidae",
+        "genus": "Gorilla",
+        "species": "Western Gorilla",
+        "description": "The western gorilla (Gorilla gorilla) is a great ape—the type species as well as the most populous species of the genus Gorilla.",
+    },
+    {
+        "pet_id": "18249",
+        "class": "mammal",
+        "family": "Hominidae",
+        "genus": "Gorilla",
+        "species": "Eastern Gorilla",
+        "description": "The eastern gorilla (Gorilla beringei) is a critically endangered species of the genus Gorilla and the largest living primate.",
+    },
+    {
+        "pet_id": "18350",
+        "class": "mammal",
+        "family": "Hominidae",
+        "genus": "Pan",
+        "species": "Bonobo",
+        "description": "The bonobo (/bəˈnoʊboʊ, ˈbɒnəboʊ/; Pan paniscus), also called the pygmy chimpanzee and less often, the dwarf or gracile chimpanzee,[3] is an endangered great ape and one of the two species making up the genus Pan; the other is Pan troglodytes, or the common chimpanzee. Apparently also a DJ. Who knew?",
+    },
+    {
+        "pet_id": "18351",
+        "class": "mammal",
+        "family": "Hominidae",
+        "genus": "Pan",
+        "species": "Common Chimpanzee",
+        "description": "Pretty much an insanely strong child. May throw poop."
+    },
+    //end of my picture responsibility
+    {
+        "pet_id": "18452",
+        "class": "mammal",
+        "family": "Hominidae",
+        "genus": "Symphalangus",
+        "species": "Siamang",
+        "description": "The siamang (Symphalangus syndactylus) is an arboreal black-furred gibbon native to the forests of Indonesia, Malaysia and Thailand. They also have fantastic hair.",
+    },
+    {
+        "pet_id": "18553",
+        "class": "mammal",
+        "family": "Hominidae",
+        "genus": "Hylobates",
+        "species": "Agile Gibbon",
+        "description": "The agile gibbon (Hylobates agilis), also known as the black-handed gibbon, is an Old World primate in the gibbon family. It is found in Indonesia on the island of Sumatra, Malaysia, and southern Thailand.",
+    },
+    {
+        "pet_id": "19154",
+        "class": "mammal",
+        "family": "Ursidae",
+        "genus": "Ailuropoda",
+        "species": "Giant Panda",
+        "description": "Big, dumb bear. Will fall down.",
+    },
+    {
+        "pet_id": "19255",
+        "class": "mammal",
+        "family": "Ursidae",
+        "genus": "Tremarctos",
+        "species": "Spectacled Bear",
+        "description": "Does not actually wear glasses. Do not try to make it do so.",
+    },
+    {
+        "pet_id": "19356",
+        "class": "mammal",
+        "family": "Ursidae",
+        "genus": "	Ursus",
+        "species": "Polar Bear",
+        "description": "The polar bear (Ursus maritimus) is a hypercarnivorous bear whose native range lies largely within the Arctic Circle, encompassing the Arctic Ocean, its surrounding seas and surrounding land masses. A boar (adult male) weighs around 350–700 kg (772–1,543 lb).",
+    },
+    {
+        "pet_id": "19357",
+        "class": "mammal",
+        "family": "Phascolarctidae",
+        "genus": "Phascolarctos",
+        "species": "Koala",
+        "description": "Loves eucalyptus. Has some fantastic ears.",
+    },
+    {
+        "pet_id": "19358",
+        "class": "mammal",
+        "family": "Ursidae",
+        "genus": "	Ursus",
+        "species": "Cinnamon Bear",
+        "description": "The cinnamon bear (Ursus americanus cinnamomum) is both a color phase and subspecies of the American black bear, native to central and western areas of the United States and Canada.",
+    },
+    {
+        "pet_id": "19359",
+        "class": "mammal",
+        "family": "Ursidae",
+        "genus": "	Ursus",
+        "species": "Glacier Bear",
+        "description": "The glacier bear (Ursus americanus emmonsii), sometimes referred to as the blue bear, is a subspecies of American black bear with silver-blue or gray hair endemic to Southeast Alaska.",
+    },
+    {
+        "pet_id": "19360",
+        "class": "mammal",
+        "family": "Ursidae",
+        "genus": "	Ursus",
+        "species": "Baluchistan black bear",
+        "description": "The Baluchistan black bear (Ursus thibetanus gedrosianus), also called the Pakistan black bear is a subspecies of the Asian black bear occurring in the Baluchistan Mountains of southern Pakistan and Iran. It has an unusually thin coat for an Asian black bear, but this is because it is found in a warmer climate than most of the other subspecies, which are found in the much colder Himalayan Mountains"
+    },
+    {
+        "pet_id": "19361",
+        "class": "mammal",
+        "family": "Ursidae",
+        "genus": "	Ursus",
+        "species": "Japanese Black Bear",
+        "description": "The Japanese black bear (Ursus thibetanus japonicus) is a subspecies of the Asian black bear that lives on three main islands of Japan: Honshu, Shikoku and Kyushu.",
+    },
+    {
+        "pet_id": "19362",
+        "class": "mammal",
+        "family": "Ursidae",
+        "genus": "	Ursus",
+        "species": "Ussuri Black Bear",
+        "description": "The Ussuri black bear (Ursus thibetanus ussuricus), also known as the Manchurian black bear, is a large subspecies of the Asian black bear native to the Far East, including the Korean Peninsula.",
+    },
+    {
+        "pet_id": "10163",
+        "class": "mammal",
+        "family": "Odobenidae",
+        "genus": "Odobenus",
+        "species": "Walrus",
+        "description": "Fat seal with big teeth. Goo goo g' joob.",
+    },
+    {
+        "pet_id": "10164",
+        "class": "mammal",
+        "family": "Monodontidae",
+        "genus": "Monodon",
+        "species": "Narwhal",
+        "description": "Water unicorn.",
+    },
+    {
+        "pet_id": "10165",
+        "class": "mammal",
+        "family": "Cervidae",
+        "genus": "Hydropotes",
+        "species": "Water Deer",
+        "description": "Vampire deer.",
+    },
+
+    //descriptions left off here ----------------------
+    {
+        "pet_id": "10166",
+        "class": "mammal",
+        "family": "Giraffidae",
+        "genus": "Giraffa",
+        "species": "Giraffe",
+        "description": "123,050",
+    },
+    {
+        "pet_id": "10167",
+        "class": "mammal",
+        "family": "Giraffidae",
+        "genus": "Okapia",
+        "species": "Okapi",
+        "description": "42,150",
+    },
+    {
+        "pet_id": "10168",
+        "class": "mammal",
+        "family": "Bovidae",
+        "genus": "Bos",
+        "species": "Gaur",
+        "description": "47,555",
+    },
+    {
+        "pet_id": "10169",
+        "class": "mammal",
+        "family": "Bovidae",
+        "genus": "Bos",
+        "species": "Zebu",
+        "description": "23,595",
+    },
+    {
+        "pet_id": "10170",
+        "class": "mammal",
+        "family": "Bovidae",
+        "genus": "Bos",
+        "species": "Wild Yak",
+        "description": "25,155",
+    },
+    {
+        "pet_id": "10171",
+        "class": "mammal",
+        "family": "Cervidae",
+        "genus": "Rangifer",
+        "species": "Reindeer",
+        "description": "63,150",
+    },
+    {
+        "pet_id": "10172",
+        "class": "mammal",
+        "family": "Cervidae",
+        "genus": "Odocoileus",
+        "species": "White-Tailed Deer",
+        "description": "2,560",
+    },
+    {
+        "pet_id": "10173",
+        "class": "mammal",
+        "family": "Cervidae",
+        "genus": "Alces",
+        "species": "Moose",
+        "description": "13,720",
+    },
+    {
+        "pet_id": "4111",
+        "class": "Reptilia",
+        "family": "Crocodylidae",
+        "genus": "Crocodylus",
+        "species": "Freshwater Crocodile",
+        "description": "24,700",
+    },
+    {
+        "pet_id": "4112",
+        "class": "Reptilia",
+        "family": "Crocodylidae",
+        "genus": "Crocodylus",
+        "species": "Mugger Crocodile",
+        "description": "26,340",
+    },
+    {
+        "pet_id": "4113",
+        "class": "Reptilia",
+        "family": "Crocodylidae",
+        "genus": "Crocodylus",
+        "species": "American Crocodile",
+        "description": "22,510",
+    },
+    {
+        "pet_id": "4114",
+        "class": "Reptilia",
+        "family": "Crocodylidae",
+        "genus": "Crocodylus",
+        "species": "Saltwater Crocodile",
+        "description": "29,100",
+    },
+    {
+        "pet_id": "4215",
+        "class": "Reptilia",
+        "family": "Alligatoridae",
+        "genus": "Caiman",
+        "species": "Broad-Snouted Caiman",
+        "description": "32,690",
+    },
+    {
+        "pet_id": "4216",
+        "class": "Reptilia",
+        "family": "Alligatoridae",
+        "genus": "Caiman",
+        "species": "Yacare Caiman",
+        "description": "33,240",
+    },
+    {
+        "pet_id": "4227",
+        "class": "Reptilia",
+        "family": "Alligatoridae",
+        "genus": "Alligator",
+        "species": "American Alligator",
+        "description": "46,990",
+    },
+    {
+        "pet_id": "4228",
+        "class": "Reptilia",
+        "family": "Alligatoridae",
+        "genus": "Alligator",
+        "species": "Chinese Alligator",
+        "description": "38,465",
+    },
+    {
+        "pet_id": "4239",
+        "class": "Reptilia",
+        "family": "Alligatoridae",
+        "genus": "Paleosuchus",
+        "species": "Cuvier's Dwarf Caiman",
+        "description": "23,565",
+    },
+    {
+        "pet_id": "42310",
+        "class": "Reptilia",
+        "family": "Alligatoridae",
+        "genus": "Paleosuchus",
+        "species": "Smooth-Fronted Caiman",
+        "description": "21,255",
+    },
+    {
+        "pet_id": "42411",
+        "class": "Reptilia",
+        "family": "Alligatoridae",
+        "genus": "Melanosuchus",
+        "species": "Black Caiman",
+        "description": "28,425",
+    },
+    {
+        "pet_id": "43112",
+        "class": "Reptilia",
+        "family": "Gavialidae",
+        "genus": "Tomistoma",
+        "species": "False Gharial",
+        "description": "33,375",
+    },
+    {
+        "pet_id": "44113",
+        "class": "Reptilia",
+        "family": "Pythonidae",
+        "genus": "Python",
+        "species": "Burmese Python",
+        "description": "7,275",
+    },
+    {
+        "pet_id": "45114",
+        "class": "Reptilia",
+        "family": "Boidae",
+        "genus": "Boa",
+        "species": "Boa Constrictor",
+        "description": "12,100",
+    },
+    {
+        "pet_id": "45215",
+        "class": "Reptilia",
+        "family": "Boidae",
+        "genus": "Eunectes",
+        "species": "Green Anaconda",
+        "description": "15,670",
+    },
+    {
+        "pet_id": "45216",
+        "class": "Reptilia",
+        "family": "Boidae",
+        "genus": "Eunectes",
+        "species": "Eunectes Beniensis",
+        "description": "17,470",
+    },
+    {
+        "pet_id": "46117",
+        "class": "Reptilia",
+        "family": "Viperidae",
+        "genus": "Montivipera",
+        "species": "Central Turkish Mountain Viper",
+        "description": "12,850",
+    },
+    {
+        "pet_id": "2111",
+        "class": "Aves",
+        "family": "Struthionidae",
+        "genus": "Struthio",
+        "species": "Ostrich",
+        "description": "11,000"
+    },
+    {
+        "pet_id": "2222",
+        "class": "Aves",
+        "family": "Apterygidae",
+        "genus": "Apteryx",
+        "species": "Kiwi",
+        "description": "2,000"
+    },
+    {
+        "pet_id": "2333",
+        "class": "Aves",
+        "family": "Anatidae",
+        "genus": "Anas",
+        "species": "Steamer Duck",
+        "description": "1,200"
+    },
+    {
+        "pet_id": "2344",
+        "class": "Aves",
+        "family": "Anatidae",
+        "genus": "Cygnus",
+        "species": "Mute swan",
+        "description": "4,500"
+    },
+    {
+        "pet_id": "2345",
+        "class": "Aves",
+        "family": "Anatidae",
+        "genus": "Cygnus",
+        "species": "Trumpeter swan",
+        "description": "6,300"
+    },
+    {
+        "pet_id": "2356",
+        "class": "Aves",
+        "family": "Anatidae",
+        "genus": "Hymenolaimus",
+        "species": "Blue Duck",
+        "description": "2,500"
+    },
+    {
+        "pet_id": "2337",
+        "class": "Aves",
+        "family": "Anatidae",
+        "genus": "Anas",
+        "species": "Mallard",
+        "description": "1,300"
+    },
+    {
+        "pet_id": "2338",
+        "class": "Aves",
+        "family": "Anatidae",
+        "genus": "Anas",
+        "species": "Yellow-Billed Duck",
+        "description": "2,600"
+    },
+    {
+        "pet_id": "2339",
+        "class": "Aves",
+        "family": "Anatidae",
+        "genus": "Anas",
+        "species": "Hawaiian duck",
+        "description": "2,800"
+    },
+    {
+        "pet_id": "24110",
+        "class": "Aves",
+        "family": "Sulidae",
+        "genus": "	Sula",
+        "species": "Blue-Footed Booby",
+        "description": "203,560"
+    },
+    {
+        "pet_id": "3111",
+        "class": "Actinopterygii",
+        "family": "Melanocetidae",
+        "genus": "Melanocetus",
+        "species": "Humpback Anglerfish",
+        "description": "129,880"
+    },
+    {
+        "pet_id": "3212",
+        "class": "Actinopterygii",
+        "family": "Stomiidae",
+        "genus": "Chauliodus",
+        "species": "Viperfish",
+        "description": "109,880"
+    },
+];
 
 
 module.exports = data;

@@ -20,8 +20,8 @@ const Seed = (pets) => {
     for (let pet of pets) {
         const newDoc = new Pet_Info({
             pet_id: pet.pet_id,
-            type: pet.type,
-            subtype: pet.subtype,
+            genus: pet.genus,
+            species: pet.species,
             description: pet.description,
             image_url: pet.image_url
         });
