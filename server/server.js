@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser')
-const db = require('../database/models/Pet_Info.js')
+const model = require('../database/models/Pet_Info.js')
 const app = express();
 
 app.use(bodyParser.json());
@@ -10,8 +10,8 @@ app.get('/api/info', (req, res) => {
     //extract pet_id from request
     let pet_id = req.body.pet_id;
 
-    //call db.getPetById(pet_id);
-    db.getPetById(pet_id, (petInfo) => {
+    //call model.getPetById(pet_id);
+    model.getPetById(pet_id, (petInfo) => {
         //send response with pet info to client
         res.send(petInfo)
     })

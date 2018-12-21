@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "server-dev": "nodemon server/server.js",
-    "test": "mocha tests/database_tests/unit_tests.js",
+    "test": "nodemon --exec 'mocha -R min'",
     "seed": "node database/data.js"
   },
   "repository": {
@@ -26,11 +26,10 @@
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "mongodb": "^3.1.10",
-    "mongoose": "^5.4.0",
+    "mongoose": "^5.2.8",
     "nodemon": "^1.18.9"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
     "mocha": "^5.2.0"
   }
 }

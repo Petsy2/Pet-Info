@@ -1,30 +1,8 @@
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 const model = require('./models/Pet_Info.js');
-// pet_id chart:
-// number index for ref: [0][1][2][3],
-// [0] - 'class' ex: mammal;
-// [1] - 'family' ex: felidae;
-// [2] - 'genus' ex: panthera;
-// [3] - 'no.' ex: Tiger... just the count of that 'family' of animal;
 
-//                 [0]      [1]     [2]    [3]
-// ex: |1137| -> Mammal, Felidae, Puma, Cougar... this is a Cougar
-
-// > CLASS chart:
-
-// 1 -> Mammal
-// 2 -> Aves 'birds'
-// 3 -> Actinopterygii 'deep sea fish'
-// 4 -> 
-// 5 -> 
-// 6 -> 
-// 7 -> 
-// 8 -> 
-// 9 ->
-
-
-mongoose.connect('mongodb://localhost:27017/petsy');
+mongoose.connect('mongodb://localhost:27017/petsy', { useNewUrlParser: true });
 
 const data = [
     {
@@ -865,11 +843,11 @@ const Seed = (pets) => {
             // image_url: pet.image_url
         });
 
-        db.Pet_Info.create(newDoc, (err, result) => {
+        model.Pet_Info.create(newDoc, (err, result) => {
             if (err) {
-                console.log(err);
+                console.log('Error creating new document in Pet_Info collection: ', err);
             } else {
-                console.log(result);
+                console.log('New document successfully created in Pet_Info');
             }
         })
     }
