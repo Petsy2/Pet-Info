@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const db = require('./index.js');
+mongoose.Promise = global.Promise;
+const model = require('./models/Pet_Info.js');
 // pet_id chart:
 // number index for ref: [0][1][2][3],
 // [0] - 'class' ex: mammal;
@@ -856,7 +857,7 @@ const Seed = (pets) => {
     for (let pet of pets) {
 
 
-        const newDoc = new db.Pet_Info({
+        const newDoc = new model.Pet_Info({
             pet_id: pet.pet_id,
             genus: pet.genus,
             species: pet.species,
