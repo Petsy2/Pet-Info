@@ -1,22 +1,26 @@
-const express = require('express');
+const express = require('express')
 const bodyParser = require('body-parser')
 const model = require('../database/models/Pet_Info.js')
-const app = express();
+const app = express()
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 
 app.get('/api/info', (req, res) => {
-    //extract pet_id from request
-    let pet_id = req.body.pet_id;
+  // extract pet_id from request
+  let pet_id = req.body.pet_id
 
-    //call model.getPetById(pet_id);
-    model.getPetById(pet_id, (petInfo) => {
-        //send response with pet info to client
-        res.send(petInfo)
-    })
-});
+  // call model.getPetById(pet_id);
+  model.getPetById(pet_id, petInfo => {
+    // send response with pet info to client
+    res.status(200).send(petInfo)
+  })
+})
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000
 
-app.listen(port, () => { console.log(`listening on port ${port}`) });
+let server = app.listen(port, () => {
+  console.log(`listening on port ${port}`)
+})
+
+module.exports = server

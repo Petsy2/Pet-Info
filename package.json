@@ -27,9 +27,11 @@
     "express": "^4.16.4",
     "mongodb": "^3.1.10",
     "mongoose": "^5.2.8",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.9",
+    "request": "^2.88.0"
   },
   "devDependencies": {
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "supertest": "^3.3.0"
   }
 }
