@@ -16,7 +16,6 @@ app.get('/api/info', (req, res) => {
   // call model.getPetById(pet_id);
   model.getPetById(pet_id, petInfo => {
     // send response with pet info to client
-    // console.log('PET INFO IN SERVICE GET: ', petInfo)
     res.status(200).send(petInfo)
   })
 })

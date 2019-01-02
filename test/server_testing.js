@@ -1,34 +1,49 @@
 const request = require('supertest')
+const expect = require('chai').expect
 const bodyParser = require('body-parser')
-const model = require('../database/models/Pet_Info.js')
 const express = require('express')
-const app = express()
+const app = require("../server/server.js");
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
+// app.use(bodyParser.json())
+// app.use(bodyParser.urlencoded({ extended: false }))
 
-describe('Server', () => {
-  before(() => {
-    const server = require('../server/server.js')
-  })
+// describe('Server', () => {
+//   before(() => {
+//     const server = require('../server/server.js')
+//   })
 
-  after(() => {
-    server.close()
-  })
-})
+//   after(() => {
+//     server.close()
+//   })
+// })
 
 describe('GET /api/info', () => {
   it('Should respond with an object', done => {
     request(app)
       .get('/api/info')
-      .send({ "pet_id": "1111" })
-      .expect((res) => {
-        typeof res.body === 'object'
+      .set({ "pet_id": "1111" })
+      .then((res) => {
+        expect(res.body).to.be.an('object');
+        done();
       })
-      .end((err, res) => {
-        if (err) {
-          console.log('ERROR in test GET /api/info')
-        }
-      }, done)
+      .catch((err) => {
+        console.log("ERROR in GET /api/info test")
+      })
+  })
+})
+
+describe('GET /api/info', () => {
+  it('Should respond with the pet species', done => {
+    request(app)
+      .get('/api/info')
+      .set({ "pet_id": "1112" })
+      .then((res) => {
+        console.log("res.body: ", res.body)
+        expect(res.body.species).to.equal('Lion');
+        done();
+      })
+      .catch((err) => {
+        console.log('ERROR in GET /api/info test: species name')
+      })
   })
 })

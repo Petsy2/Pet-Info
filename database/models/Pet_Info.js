@@ -17,13 +17,14 @@ const Pet_Info = mongoose.model('Pet_Info', petsySchema);
 
 const getPetById = (pet_id, cb) => {
     const query = Pet_Info.findOne({ pet_id: pet_id })
-    query.exec((err, pet) => {
-        if (err) {
-            cb(err);
-        } else {
-            cb(pet);
-        }
-    })
+    query.exec()
+        .then((err, pet) => {
+            if (err) {
+                cb(err);
+            } else {
+                cb(pet);
+            }
+        })
 }
 
 module.exports = {
