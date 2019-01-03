@@ -10,7 +10,6 @@
 
 
 ## Run the app
-- To transpile code: npm run react-dev
 - To start server: npm run server-dev
 
 
