@@ -1,6 +1,7 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/petsy', { useNewUrlParser: true });
+mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true });
 
 const petsySchema = mongoose.Schema({
     pet_id: {

@@ -1,21 +1,8 @@
-const request = require('supertest')
-const expect = require('chai').expect
-const bodyParser = require('body-parser')
-const express = require('express')
+const request = require('supertest');
+const expect = require('chai').expect;
 const app = require("../server/server.js");
 
-// app.use(bodyParser.json())
-// app.use(bodyParser.urlencoded({ extended: false }))
 
-// describe('Server', () => {
-//   before(() => {
-//     const server = require('../server/server.js')
-//   })
-
-//   after(() => {
-//     server.close()
-//   })
-// })
 
 describe('GET /api/info', () => {
   it('Should respond with an object', done => {
@@ -23,7 +10,7 @@ describe('GET /api/info', () => {
       .get('/api/info')
       .set({ "pet_id": "1111" })
       .then((res) => {
-        expect(res.body).to.be.an('object');
+        expect(res.body).to.be.an('array');
         done();
       })
       .catch((err) => {

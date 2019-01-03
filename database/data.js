@@ -1,8 +1,9 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 const model = require('./models/Pet_Info.js');
 
-mongoose.connect('mongodb://localhost:27017/petsy', { useNewUrlParser: true });
+mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true });
 
 const data = [
     {
@@ -955,6 +956,7 @@ const Seed = (pets) => {
             }
         })
     }
+    console.log('How many pets is too many pets?')
 }
 
 Seed(data);
