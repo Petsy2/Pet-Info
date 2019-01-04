@@ -6,7 +6,9 @@
   "scripts": {
     "server-dev": "nodemon server/server.js",
     "test": "nodemon --exec 'mocha -R min'",
-    "seed": "node database/data.js"
+    "seed": "node database/data.js",
+    "restart": "pm2 startOrRestart ecosystem.config.js",
+    "deploy": "pm2 deploy ecosystem.config.js production"
   },
   "repository": {
     "type": "git",
@@ -34,6 +36,7 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
+    "pm2": "^3.2.4",
     "supertest": "^3.3.0"
   }
 }
