@@ -8,10 +8,10 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
-app.get('/api/info', (req, res) => {
+app.get('/api/info/:pet_id', (req, res) => {
   // extract pet_id from request
-  let pet_id = req.headers.pet_id
-  console.log('req in service GET: ', req.headers.pet_id)
+  let pet_id = req.params.pet_id
+  console.log('req in service GET: ', req.params.pet_id)
 
   // call model.getPetById(pet_id);
   model.getPetById(pet_id, petInfo => {
