@@ -224,7 +224,7 @@ const data = [
     species: "Antarctic Minke Whale",
     description:
       "The Antarctic minke whale or southern minke whale (Balaenoptera bonaerensis) is a species of minke whale within the suborder of baleen whales.",
-    image_url: "https://s3.us-east-2.amazonaws.com/petpicks/13123.jpg"
+    image_url: "https://s3.us-east-2.amazonaws.com/petpicks/13123.jpeg"
   },
   {
     pet_id: "13124",
