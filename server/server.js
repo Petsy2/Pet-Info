@@ -3,22 +3,10 @@ const bodyParser = require("body-parser");
 const model = require("../database/models/Pet_Info.js");
 const cors = require("cors");
 const app = express();
-const shrinkRay = require("shrink-ray-current");
 
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(shrinkRay({ filter: shouldCompress }));
-
-function shouldCompress(req, res) {
-  if (req.headers["x-no-compression"]) {
-    // don't compress responses with this request header
-    return false;
-  }
-
-  // fallback to standard filter function
-  return shrinkRay.filter(req, res);
-}
 
 app.get("/api/info/:pet_id", (req, res) => {
   // extract pet_id from request
