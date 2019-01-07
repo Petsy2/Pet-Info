@@ -31,7 +31,8 @@
     "mongodb": "^3.1.10",
     "mongoose": "^5.2.8",
     "nodemon": "^1.18.9",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "shrink-ray-current": "^3.0.2"
   },
   "devDependencies": {
     "chai": "^4.2.0",
