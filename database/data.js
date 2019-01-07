@@ -335,8 +335,7 @@ const data = [
     family: "Camelidae",
     genus: "Camelus",
     species: "Bactrian camel",
-    description:
-      "The Bactrian camel (Camelus bactrianus) is a large, even-toed ungulate native to the steppes of Central Asia. The Bactrian camel has two humps on its back, in contrast to the single-humped dromedary camel",
+    description: "Mike Mike Mike Mike Mike… What day is it Mike?",
     image_url: "https://s3.us-east-2.amazonaws.com/petpicks/16235.jpg"
   },
   {
