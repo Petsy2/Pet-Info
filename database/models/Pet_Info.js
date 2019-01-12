@@ -1,7 +1,8 @@
-require('dotenv').config();
+//require('dotenv').config();
 const mongoose = require('mongoose');
-mongoose.Promise = global.Promise;
-mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true });
+//mongoose.Promise = global.Promise;
+//mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost/pets');
 
 const petsySchema = mongoose.Schema({
     pet_id: {
@@ -15,6 +16,8 @@ const petsySchema = mongoose.Schema({
 }, { collection: 'Pet_Info' })
 
 const Pet_Info = mongoose.model('Pet_Info', petsySchema);
+
+// .explain('executionStats')
 
 const getPetById = (pet_id, cb) => {
     const query = Pet_Info.findOne({ pet_id: pet_id })
