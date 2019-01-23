@@ -19,7 +19,7 @@ const Pet_Info_TEST = mongoose.model('Pet_Info_TEST', testSchema);
 
 mongoose.connection
     .on('error', (error) => {
-        console.log('ERROR connecting to database')
+        console.log('ERROR connecting to database', error)
     })
     .once('open', () => {
         console.log("Connected to database for testing");
