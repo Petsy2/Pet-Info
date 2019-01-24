@@ -28,7 +28,7 @@ module.exports = {
             key: '~/.ssh/petsy2.pem',
             ref: 'origin/master',
             repo: 'git@github.com:Petsy2/Pet-Info.git',
-            path: '/home/ubuntu/Pet-Info',
+            path: '/home/ubuntu',
             'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js'
         }
     }
