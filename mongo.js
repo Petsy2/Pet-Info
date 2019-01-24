@@ -1,4 +1,4 @@
-const mongo = require('./db/queryMongo');
+const mongo = require('./database/queryMongo');
 
 const random = n => {
     return Math.floor(Math.random() * (n + 1))
