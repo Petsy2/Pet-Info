@@ -3,11 +3,13 @@ const fs = require('fs');
 
 const makeCSV = async () => {
     let string = 'id,first_name,last_name,job_description,image_url';
-    for (let i = 0; i < 10000000; i++) {
+    for (let i = 0; i < 100; i++) {
         string += '\n' + i + ',' + faker.name.firstName() + ',' + faker.name.lastName() + ',' + faker.name.jobDescriptor() + ' ' + faker.name.jobType() + ',' + faker.image.imageUrl()
     }
     return string;
 }
+
+
 
 const data = makeCSV();
 
