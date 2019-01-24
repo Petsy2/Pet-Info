@@ -24,8 +24,8 @@ module.exports = {
     deploy: {
         production: {
             user: 'ubuntu',
-            host: 'ec2-13-59-91-25.us-east-2.compute.amazonaws.com',
-            key: '~/.ssh/petsy2.pem',
+            host: 'ec2-52-15-38-72.us-east-2.compute.amazonaws.com',
+            key: '~/.ssh/petsy3.pem',
             ref: 'origin/master',
             repo: 'git@github.com:Petsy2/Pet-Info.git',
             path: '/home/ubuntu/Pet-Info',
